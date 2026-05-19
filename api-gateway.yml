@@ -12,15 +12,13 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/user/**
-          filters:
-            - StripPrefix=1
+          
 
         - id: order-service
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/order/**
-          filters:
-            - StripPrefix=1
+         
 
 eureka:
   client:
